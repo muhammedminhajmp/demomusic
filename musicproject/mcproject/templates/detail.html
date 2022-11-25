@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{music.img.url}}" width="300" height="300">
+        </div>
+<div class="col-md-6">
+    <h2>{{music.name}}</h2>
+    <h4>{{music.desc}}</h4>
+    <h6>{{music.year}}</h6>
+    <a class="btn btn-warning" href="{% url 'musicapp:update' music.id %}">update</a>
+    <a class="btn btn-danger" href="{% url 'musicapp:delete' music.id %}">delete</a>
+</div>
+
+    </div>
+</div>
+{% endblock %}
+
